@@ -176,3 +176,70 @@ Se você perceber algo de errado ou faltando, por favor abra uma [issue](https:/
   </details>
 
 <!--START-SECTION:setup-->
+
+# Seção 1: Setup TypeScript com React
+
+## Prerequisitos
+
+1. bom conhecimento de [React](https://reactjs.org)
+
+2. familiaridade com [TypeScript Types](https://www.typescriptlang.org/docs/handbook/basic-types.html) ([2ality's guide](http://2ality.com/2018/04/type-notation-typescript.html) sempre ajuda. Se você é um iniciante em TypeScript, veja este [chibicode’s tutorial](https://ts.chibicode.com/todo/))
+3. já leu [a seção TypeScript no doc oficial do React](https://reactjs.org/docs/static-type-checking.html#typescript)
+4. já leu [a seção React no novo playground do TypeScript](http://www.typescriptlang.org/play/index.html?jsx=2&esModuleInterop=true&e=181#example/typescript-with-react) (opcional: fazer os 40+ examplos no [playground](http://www.typescriptlang.org/play/index.html))
+
+Este guia vai sempre assumir que você esta usando a última versão do TypeScript. Notas para versões antigas vão poder ser expandidas nas `<details>` tags.
+
+## React + TypeScript Starter Kits
+
+Cloud setups:
+
+- [TypeScript Playground com React](https://www.typescriptlang.org/play?#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwCwAUKJLHAN5wCuqWAyjMhhYANFx4BRAgSz44AXzhES5Snhi1GjLAA8W8XBAB2qeAGEInQ0KjjtycABsscALxwAFAEpXAPnaM4OANjeABtA0sYUR4Yc0iAXVcxPgEhdwAGT3oGAOTJaXx3L19-BkDAgBMIXE4QLCsAOhhgGCckgAMATQsgh2BcAGssCrgAEjYIqwVmutR27MC5LM0yuEoYTihDD1zAgB4K4AA3H13yvbAfbs5e-qGRiYspuBmsVD2Aekuz-YAjThgMCMcCMpj6gxcbGKLj8MTiVnck3gAGo4ABGTxyU6rcrlMF3OB1H5wT7-QFGbG4z6HE65ZYMOSMIA) só se estiver debugging types (e reportando issues)
+- [CodeSandbox](http://ts.react.new) - cloud IDE, inicia super rápido
+- [Stackblitz](https://stackblitz.com/edit/react-typescript-base) - igual ao CodeSandbox
+
+Local dev setups:
+
+- [Next.js](https://nextjs.org/docs/basic-features/typescript): `npx create-next-app -e with-typescript` vai criar na sua pasta atual
+- [Create React App](https://facebook.github.io/create-react-app/docs/adding-typescript): `npx create-react-app name-of-app --template typescript` vai criar em uma nova pasta
+- [Meteor](https://guide.meteor.com/build-tool.html#typescript): `meteor create --typescript name-of-my-new-typescript-app`
+- [Ignite](https://github.com/infinitered/ignite#use-ignite-andross-infinite-red-andross-boilerplate) para React Native: `ignite new myapp`
+- TSDX para Criar React+TS libraries
+
+Ferramentas menos maduras que ainda valem a pena checar:
+
+- [Vite](https://twitter.com/swyx/status/1282727239230996480?lang=en): `npm init vite-app my-react-project --template react-ts` (nota - ainda não na v1.0, mas muito ágil)
+- [Snowpack](<https://www.snowpack.dev/#create-snowpack-app-(csa)>): `npx create-snowpack-app my-app --template app-template-react-typescript`
+- [Docusaurus v2](https://v2.docusaurus.io/docs/installation) com [TypeScript Support](https://v2.docusaurus.io/docs/typescript-support)
+- [Parcel](https://v2.parceljs.org/languages/typescript/)
+
+Setup manual:
+
+- [Basarat's guide](https://github.com/basarat/typescript-react/tree/master/01%20bootstrap) para **setup manual** do React + TypeScript + Webpack + Babel
+- Em particular, tenha certeza que você tem `@types/react` e `@types/react-dom` instalados ([Leia mais sobre o  projeto DefinitelyTyped se você não esta familiarizado](https://definitelytyped.org/))
+- Tem também muitos outros React + TypeScript boilerplates, por favor veja [nossa lista de Outros Recursos](https://react-typescript-cheatsheet.netlify.app/docs/basic/recommended/resources/)
+
+## Importar React
+
+```tsx
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+```
+
+This is the [most futureproof way](https://www.reddit.com/r/reactjs/comments/iyehol/import_react_from_react_will_go_away_in_distant/) to import React. If you set `--allowSyntheticDefaultImports` (or add `"allowSyntheticDefaultImports": true`) in your `tsconfig.json` you can use more familiar imports:
+
+```tsx
+import React from "react";
+import ReactDOM from "react-dom";
+```
+
+<details>
+
+<summary>Explanation</summary>
+
+Why `allowSyntheticDefaultImports` over `esModuleInterop`? [Daniel Rosenwasser](https://twitter.com/drosenwasser/status/1003097042653073408) has said that it's better for webpack/parcel. For more discussion check out <https://github.com/wmonk/create-react-app-typescript/issues/214>
+
+You should also check [the new TypeScript docs for official descriptions between each compiler flag](https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports)!
+
+</details>
+
+<!--END-SECTION:setup-->
