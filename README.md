@@ -95,7 +95,7 @@ Se você perceber algo de errado ou faltando, por favor abra uma [issue](https:/
   - [Concurrent React/React Suspense](#concurrent-reactreact-suspense)
 - [Troubleshooting Handbook: Types](#troubleshooting-handbook-types)
   - [Union Types and Type Guarding](#union-types-and-type-guarding)
-  - [Optional Types](#optional-types)
+  - [Types Opcionais](#optional-types)
   - [Enum Types](#enum-types)
   - [Type Assertion](#type-assertion)
   - [Simulating Nominal Types](#simulating-nominal-types)
@@ -225,7 +225,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 ```
 
-This is the [most futureproof way](https://www.reddit.com/r/reactjs/comments/iyehol/import_react_from_react_will_go_away_in_distant/) to import React. If you set `--allowSyntheticDefaultImports` (or add `"allowSyntheticDefaultImports": true`) in your `tsconfig.json` you can use more familiar imports:
+Esta é a melhor maneira [para o futuro](https://www.reddit.com/r/reactjs/comments/iyehol/import_react_from_react_will_go_away_in_distant/) da importação React. Se você usar `--allowSyntheticDefaultImports` (ou adicionar `"allowSyntheticDefaultImports": true`) no seu `tsconfig.json` você pode utilizar imports mais familiares:
 
 ```tsx
 import React from "react";
@@ -234,11 +234,11 @@ import ReactDOM from "react-dom";
 
 <details>
 
-<summary>Explanation</summary>
+<summary>Explicação</summary>
 
-Why `allowSyntheticDefaultImports` over `esModuleInterop`? [Daniel Rosenwasser](https://twitter.com/drosenwasser/status/1003097042653073408) has said that it's better for webpack/parcel. For more discussion check out <https://github.com/wmonk/create-react-app-typescript/issues/214>
+Porque `allowSyntheticDefaultImports` ao invés de `esModuleInterop`? [Daniel Rosenwasser](https://twitter.com/drosenwasser/status/1003097042653073408) disse que é melhor para webpack/parcel. Para mais discussões, veja <https://github.com/wmonk/create-react-app-typescript/issues/214>
 
-You should also check [the new TypeScript docs for official descriptions between each compiler flag](https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports)!
+Você também deveria checar [o novo docs do TypeScript decrições oficiais entre cada compiler flag](https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports)!
 
 </details>
 
