@@ -25,7 +25,7 @@
 
 <div align="center">
 
-:wave:  Este repositório é mantido por [@giseladifini](https://twitter.com/GiselaDifini) e [@swyx](https://twitter.com/swyx). Estamos muito felizes que você quer experimentar React com Typescript! 
+:wave: Este repositório é mantido por [@giseladifini](https://twitter.com/GiselaDifini) e [@swyx](https://twitter.com/swyx). Estamos muito felizes que você quer experimentar React com Typescript!
 Se você perceber algo de errado ou faltando, por favor abra uma [issue](https://github.com/typescript-cheatsheets/react-pt/issues/new)! :+1:
 
 </div>
@@ -83,7 +83,7 @@ Se você perceber algo de errado ou faltando, por favor abra uma [issue](https:/
   - [Exemplos Básicos de Prop Types](#basic-prop-types-examples)
   - [Exemplo Úteis de React Prop Types](#useful-react-prop-type-examples)
   - [getDerivedStateFromProps](#getderivedstatefromprops)
-  - [Forms e Eventos](#forms-and-events)
+  - [Formulários e Eventos](#forms-and-events)
   - [Context](#context)
   - [Exemplo Básico](#basic-example)
   - [Exemplo Estendido](#extended-example)
@@ -215,7 +215,7 @@ Ferramentas menos maduras que ainda valem a pena checar:
 Setup manual:
 
 - [Basarat's guide](https://github.com/basarat/typescript-react/tree/master/01%20bootstrap) para **setup manual** do React + TypeScript + Webpack + Babel
-- Em particular, tenha certeza que você tem `@types/react` e `@types/react-dom` instalados ([Leia mais sobre o  projeto DefinitelyTyped se você não esta familiarizado](https://definitelytyped.org/))
+- Em particular, tenha certeza que você tem `@types/react` e `@types/react-dom` instalados ([Leia mais sobre o projeto DefinitelyTyped se você não esta familiarizado](https://definitelytyped.org/))
 - Tem também muitos outros React + TypeScript boilerplates, por favor veja [nossa lista de Outros Recursos](https://react-typescript-cheatsheet.netlify.app/docs/basic/recommended/resources/)
 
 ## Importar React
